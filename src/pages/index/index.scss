@@ -1,13 +1,46 @@
 .index {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f2f2f2;
-  font-size: 16px;
-}
+  .header {
+    padding: 20px;
+    background: #fff;
 
-Button {
-  margin-top: 20px;
+    .title {
+      Text {
+        display: block;
+
+        &.sub-title {
+          font-size: 24px;
+          color: #999;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  .tabs {
+    display: flex;
+    background: #fff;
+    padding: 0 20px;
+    border-top: 1px solid #eee;
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 15px 0;
+      position: relative;
+
+      &.active {
+        color: #7232dd;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          background: #7232dd;
+        }
+      }
+    }
+  }
 }

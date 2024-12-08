@@ -1,9 +1,9 @@
-export default {
-  pages: [
-    "pages/index/index", // 首页
-  ],
+export default defineAppConfig({
+  pages: ["pages/index/index"],
   window: {
-    navigationBarTitleText: "我的小程序",
-    navigationBarBackgroundColor: "#ffffff",
+    backgroundTextStyle: "light",
+    navigationBarBackgroundColor: "#fff",
+    navigationBarTitleText: "首页",
+    navigationBarTextStyle: "black",
   },
-};
+});

@@ -1,24 +1,24 @@
-// babel-preset-taro 更多选项和默认值：
-// https://github.com/NervJS/taro/blob/next/packages/babel-preset-taro/README.md
 module.exports = {
   presets: [
-    ['taro',
+    [
+      "taro", // Taro 的预设
       {
-        framework: 'react',
-        ts: 'false',
-        compiler: 'vite',
-      }]
+        framework: "react", // 使用 React 框架
+        ts: false, // 不使用 TypeScript
+        compiler: "vite", // 使用 Vite 编译器
+      },
+    ],
   ],
   plugins: [
     [
-      "import",
+      "import", // 配置按需加载插件
       {
-        "libraryName": "@nutui/nutui-react-taro",
-        "libraryDirectory": "dist/esm",
-        "style": 'css',
-        "camel2DashComponentName": false
+        libraryName: "@nutui/nutui-react-taro",
+        libraryDirectory: "dist/esm",
+        style: (name) => `${name}/style`, // 动态加载样式
+        camel2DashComponentName: false, // 禁止组件名转化为短横线
       },
-      'nutui-react-taro'
-    ]
-  ]
-}
+      "nutui-react-taro",
+    ],
+  ],
+};
